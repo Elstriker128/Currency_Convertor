@@ -23,9 +23,24 @@ namespace Currency_Convertor
     {
         public MainWindow()
         {
-            string ApiKey=string.Empty;
             InitializeComponent();
-            ApiHelper.InitializeClient(ApiKey);
+        }
+        private void ApiPlacement_GotKeyboardFocus(object sender, RoutedEventArgs e)
+        {
+            ApiPlacement.Clear();
+        }
+
+        private void ApiPlacement_LostKeyboardFocus(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(ApiPlacement.Text))
+            {
+                ApiPlacement.Text = "Input your API key";
+            }
+        }
+        private void ActivationButton_Click(object sender, RoutedEventArgs e)
+        {
+            //string ApiKey = ApiPlacement.Text;
+            //ApiHelper.CheckIfApiValid(ApiKey);
         }
     }
 }
