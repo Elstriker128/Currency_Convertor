@@ -5,16 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Currency_Convertor"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <!--<Label x:Name="DirectionForApiKey" FontSize="20" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="3" Margin="0,60,0,5" OpacityMask="Black" Foreground="Black" BorderBrush="Black" Content="Input your API key" BorderThickness="1"/>-->
         <TextBox x:Name="ApiPlacement" TextAlignment="Center" FontSize="25" Height="40" Grid.Row="0" Margin="120,120,120,10" SelectionBrush="#FF1AD700" BorderBrush="Black" Foreground="#FF8A8585" Text="Input your API key" GotKeyboardFocus="ApiPlacement_GotKeyboardFocus" LostKeyboardFocus="ApiPlacement_LostKeyboardFocus"/>
         <Button x:Name="ActivationButton" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,10,0,0" FontWeight="DemiBold" FontSize="30" Grid.Row="1" Click="ActivationButton_Click" Background="Green" BorderBrush="Black" Foreground="White" Width="324">Validate</Button>
+        <Label x:Name="InvalidKey" Content="Invalid API Key" VerticalAlignment="Top" Grid.Row="0" HorizontalAlignment="Center" Margin="0,104,0,0" Foreground="Red" Visibility="Hidden"/>
     </Grid>
 </Window>
     

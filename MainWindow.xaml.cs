@@ -37,10 +37,22 @@ namespace Currency_Convertor
                 ApiPlacement.Text = "Input your API key";
             }
         }
-        private void ActivationButton_Click(object sender, RoutedEventArgs e)
+        private async void ActivationButton_Click(object sender, RoutedEventArgs e)
         {
-            //string ApiKey = ApiPlacement.Text;
-            //ApiHelper.CheckIfApiValid(ApiKey);
+            string ApiKey = ApiPlacement.Text;
+            bool valid = await ApiHelper.CheckIfApiValid(ApiKey);
+            if (valid)
+            {
+                InvalidKey.Visibility = Visibility.Hidden;
+                ApiHelper.InitializeClient(ApiKey);
+                ConversionInfo conversion = new ConversionInfo();
+                conversion.Show();
+            }
+            else
+            {
+                InvalidKey.Visibility = Visibility.Visible;
+                ApiPlacement.Text = string.Empty;
+            }
         }
     }
 }
