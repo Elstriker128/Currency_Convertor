@@ -20,11 +20,11 @@
 
         <Button x:Name="ConversionButton" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,10,0,0" FontWeight="DemiBold" FontSize="30" Grid.Row="2" Grid.Column="1" Click="ConversionButton_Click" Background="Green" BorderBrush="Black" Foreground="White" Width="324">Convert</Button>
         <Button x:Name="ExchangeButton" VerticalAlignment="Top" HorizontalAlignment="Center" FontWeight="DemiBold" FontSize="36" Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" Click="ExchangeButton_Click" Background="White" BorderBrush="White" Foreground="Green" Width="68" Margin="0,110,0,0">⇄</Button>
-        
-        <ComboBox x:Name="FirstCurrency" Margin="10,50,10,0" Height="60" SelectionChanged="FirstCurrency_SelectionChanged"/>
-        <ComboBox x:Name="SecondCurrency" Margin="10,50,10,0" Height="60" SelectionChanged="SecondCurrency_SelectionChanged" Grid.Column="2"/>
 
-        <TextBox x:Name="InputAmount" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextAlignment="Right" FontSize="30" Height="40" Grid.Row="1" Margin="10" SelectionBrush="#FF98FF8A" BorderBrush="Black" Foreground="Green" Text="0"/>
+        <ComboBox x:Name="FirstCurrency" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="10,50,10,0" Height="30" SelectionChanged="FirstCurrency_SelectionChanged"/>
+        <ComboBox x:Name="SecondCurrency" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="10,50,10,0" Height="30" SelectionChanged="SecondCurrency_SelectionChanged" Grid.Column="2"/>
+
+        <TextBox x:Name="InputAmount" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" GotKeyboardFocus="InputAmount_GotKeyboardFocus" TextAlignment="Right" FontSize="30" Height="40" Grid.Row="1" Margin="10" SelectionBrush="#FF98FF8A" BorderBrush="Black" Foreground="Green" Text="0"/>
         <TextBox x:Name="ResultAmount" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextAlignment="Right" FontSize="30" Height="40" Grid.Row="1" Grid.Column="2" Margin="10" SelectionBrush="#FF98FF8A" BorderBrush="Black" Foreground="Green" Text="0" IsReadOnly="True"/>
 
 
