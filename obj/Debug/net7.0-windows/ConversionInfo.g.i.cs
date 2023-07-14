@@ -101,7 +101,7 @@ namespace Currency_Convertor {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Currency_Convertor;component/conversioninfo.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Currency_Convertor;V1.0.0.0;component/conversioninfo.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\ConversionInfo.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
